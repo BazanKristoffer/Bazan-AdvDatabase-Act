@@ -9,7 +9,12 @@
         <br/><br/>
 
         <form action="../functions/add.php" method="POST" name="form1">
-            <table></table>
+            <table width="25%" border="0">
+                <tr>
+                    <td>Subject Code</td>
+                    <td><input type="text" name="code"></td>
+                </tr>
+            </table>
         </form>
     </body>
 </html>
