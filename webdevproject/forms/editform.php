@@ -7,3 +7,22 @@
         $name = $res['subject_name'];
     }
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Data</title>
+    </head>
+    <body>
+        <h1>Edit Subject</h1>
+        <a href="../index.php">Home</a>
+        <br/><br/>
+        <form action="../functions/edit.php" method="post" name="form1">
+            <table border="0">
+                <tr>
+                    <td>Subject Code</td>
+                    <td><input type="text" name="code" value="<?php echo $code;?>"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
