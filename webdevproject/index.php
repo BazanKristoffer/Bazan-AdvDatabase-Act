@@ -10,5 +10,11 @@
     <body>
         <h1>My Subjects</h1>
         <a href="forms/addform.php">Add Subject</a><br/><br/>
+        <table width='100%' border= 1>
+            <tr bgcolor='#CCCCCC'>
+
+            </tr>
+
+        </table>
     </body>
 </html>
