@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Add Syllabus</title>
+        <title>Add Syallabus</title>
     </head>
     <body>
-        <?php
-            include_once("../dbConnection/mysqlconfig_connection.php");
+        <h1>Add Syallabus</h1>
+        <a href="../index.php">Home</a>
+        <br/><br/>
 
-            if(isset($_POST['Submit'])) {
-                $code = $_POST['code'];
-                $name = $_POST['author'];
-                $subject = $_POST['subject'];
-
-                if(empty($code) || empty($author)) {
-                    if(empty($code)) {
-                        echo "<font color='red>'Syllabus Code field is empty.</font><br/>";
-                    }
-                    if(empty($name)) {
-                        echo "<font color='red'>Syallabus Author field is empty.</font><br/> ";
-                    }
-                    echo"<br/><a href='javascript:self.history.back();'>Go Back<a/>";
-                }    
-                else {
-                    $result = mysqli_query($dbc, "INSERT INTO tblsyllabus(syllabus_code, syllabus_author, subject_id) VALUES('$code','$name','$subject')");
-                    echo "<font color='green'>Data added sucessfully.";
-                    echo "<br/><a href='../index.php'>View Result</a>";
-                }
-            }
-        ?>
+        <form action="../functions/addsyllabus.php" method="POST" name="form1">
+            <table width="25%" border="0">
+                <tr>
+                    <td>Syallabus Code</td>
+                    <td><input type="text" name="code"></td>
+                </tr>
+                
+                <tr>
+                    <td>Syallabus Author</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="Submit" value="Add"></td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>
