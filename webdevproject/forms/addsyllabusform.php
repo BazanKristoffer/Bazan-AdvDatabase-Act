@@ -24,12 +24,14 @@
                     <td>
                         <select name="subjects">
                             <?php
-                            include_once ("../dbConnection/mysqlconfig_connection.php");
-                            $query = "SELECT * FROM tblsubjects";
-                            $result = mysqli_query($dbc, $query);
-                            while($res = mysqli_fetch_array($result)){
-                                echo"<option value = \"".$res['subject_id']."\">";
-                            }
+                                include_once ("../dbConnection/mysqlconfig_connection.php");
+                                $query = "SELECT * FROM tblsubjects";
+                                $result = mysqli_query($dbc, $query);
+                                while($res = mysqli_fetch_array($result)){
+                                    echo"<option value = \"".$res['subject_id']."\">";
+                                    echo $res['subject_name'];
+                                    echo"</option>";
+                                }
                             ?>
                         </select>
                     </td>
