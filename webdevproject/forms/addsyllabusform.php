@@ -24,8 +24,10 @@
                     <td>
                         <select name="subjects">
                             <?php
-                            include_once()
+                            include_once ("../dbConnection/mysqlconfig_connection.php");
+
                             ?>
+                        </select>
                     </td>
                 </tr>
                 
